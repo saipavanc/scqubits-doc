@@ -20,3 +20,4 @@ Modules
    scqubits.settings
    scqubits.ui
    scqubits.utils
+   scqubits.explorer.explorer_widget

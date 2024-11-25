@@ -37,15 +37,13 @@ relevant classes and functions of scqubits.
 
    qubits/guide-qubits.rst
    noise/guide-noise.rst
-   Single-Qubit Parameter Sweep <./parametersweep/ipynb/paramsweep.ipynb>
-
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: CUSTOM CIRCUIT
 
-   ./circuit/ipynb/custom_circuit_root.ipynb
+   ./circuit/ipynb/custom_circuit_root.rst
 
 
 .. toctree::

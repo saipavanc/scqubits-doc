@@ -19,7 +19,7 @@ The transmon qubit [Koch2007]_ is described by the Hamiltonian
 
 expressed in discrete charge basis. Here, :math:`E_C` is the charging energy,
 :math:`E_J` the Josephson energy, and
-:math:`n_g` the offset charge. Within the :class:`~scqubits.Transmon` class,
+:math:`n_g` the offset charge. Within the :class:`~scqubits.core.transmon.Transmon` class,
 charge-basis representation is employed with a
 charge-number cutoff specified by ``ncut``. This cutoff must be chosen sufficiently large for convergence.
 
@@ -34,7 +34,7 @@ From within Jupyter notebook, a transmon instance can alternatively be created w
 
    transmon = scqubits.Transmon.create()
 
-This functionality is enabled if the ``ipywidgets`` package is installed, and displays GUI forms prompting for
+This functionality is enabled if the :obj:`ipywidgets` package is installed, and displays GUI forms prompting for
 the entry of the required parameters.
 
 Calculational methods related to Hamiltonian and energy spectra

@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.abspath("../../../scqubits"))
 sys.path.append(os.path.abspath("sphinxext"))
 
 import scqubits
+from scqubits import *
 
 # -- Project information -----------------------------------------------------
 
@@ -43,10 +44,39 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "IPython.sphinxext.ipython_console_highlighting",
     "IPython.sphinxext.ipython_directive",
-    "sphinx_copybutton"
+    "sphinx_copybutton",
+    "myst_nb",
+    'sphinx.ext.intersphinx',
+]
+myst_enable_extensions = [
+    "dollarmath",
+    "amsmath",
+    "deflist",
+    "html_admonition",
+    "html_image",
+    "colon_fence",
+    "smartquotes",
+    "replacements",
+    "linkify",
+    "substitution",
+    "tasklist",
 ]
 
-
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.ipynb': 'myst-nb',
+    '.myst': 'myst-nb',
+}
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3', None),
+    'matplotlib': ('https://matplotlib.org/stable/', None),
+    'numpy': ('https://numpy.org/doc/stable/', None),
+    'scipy': ('https://docs.scipy.org/doc/scipy/', None),
+    'qutip': ('https://qutip.readthedocs.io/en/stable/', None),
+    'sympy': ('https://docs.sympy.org/latest/', None),
+    # Add other mappings as needed
+}
+nb_execution_mode = "off"
 # -- Internationalization ------------------------------------------------
 # specifying the natural language populates some key tags
 language = "en"
@@ -83,8 +113,6 @@ exclude_patterns = [
     "Thumbs.db",
     ".DS_Store",
 ]
-
-autosummary_generate = True
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -183,5 +211,6 @@ nbsphinx_execute_arguments = [
 
 nbsphinx_prompt_width = "0ex"
 nbsphinx_codecell_lexer = "ipython3"
+
 # The following only to be enabled for debugging purposes
 # nbsphinx_allow_errors = True
